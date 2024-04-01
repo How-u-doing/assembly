@@ -135,6 +135,8 @@ WOW! It's soooo close to the actual time `0.013475` seconds (we also need to sum
 those 4 local sums)!! That means ILP indeed happens on my Mac M2 Pro and our
 speculation is probably right.
 
+![](img/loop_unrolling_pipeline.svg)
+
 Wait a minute, someone might say, the `ldr`s seem to cause problems since they all
 read values into the `w6` register, and then 4 concurrent reads from that register!
 The answer is *register renaming* to the rescue! We can also try it ourselves.
@@ -174,6 +176,25 @@ use [register renaming](https://en.wikipedia.org/wiki/Register_renaming)
 and are [superscalar](https://en.wikipedia.org/wiki/Superscalar_processor),
 so that they can execute multiple independent instructions in parallel by
 dispatching them to different functional units.
+
+To better understand how register renaming works I'll use the following
+image (although it's not ARM64, the overall principle should be similar ;):
+
+![](img/Core_i7_Pipeline.png)
+*Image from Patterson and Hennessy's Computer Organization and Design:
+The Hardware/Software Interface, Fifth Edition*
+
+After the CPU decodes the 4 `add`s and 4 `ldr`s in `sum_unrolling_local_array`,
+the instructions are copied into the reservation station. Any operands that are
+available in the register file or reorder buffer are also immediately copied
+into the reservation station. Then our ALUs that will execute the `add`
+instructions will listen on the load/store units. When our 4 loads are
+complete, their results are sent directly into the waiting reservation station
+bypassing the registers, which in turn will be consumed by the ALUs. So,
+our 4 `ldr` instructions won't write to the architectural register `w6`.
+Instead, the physical register entries or the reservation station entries
+will be written, which effectively implements register renaming.
+
 
 Similar analysis can be made to `sum_simple` vs `sum_unrolling`:
 one iteration in `sum_unrolling` effectively does 4 iterations in `sum_simple`.
