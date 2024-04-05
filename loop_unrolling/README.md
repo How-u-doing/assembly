@@ -195,6 +195,13 @@ our 4 `ldr` instructions won't write to the architectural register `w6`.
 Instead, the physical register entries or the reservation station entries
 will be written, which effectively implements register renaming.
 
+Watch [this](https://www.youtube.com/watch?v=y-N0Dsc9LmU&list=PLeWkeA7esB-PcOTrTCvAsaCArnCMQkcNv)
+awesome YouTube course on ILP, DLP, and TLP or read the
+[Tomasulo's algorithm](https://en.wikipedia.org/wiki/Tomasulo%27s_algorithm)
+section from the *Computer Architecture: A Quantitative Approach Sixth Edition*
+book for a thorough understanding of dynamic scheduling/register renaming/OoOE.
+![](img/Tomasulo's_Algorithm_1.png) ![](img/Tomasulo's_Algorithm_2.png)
+
 
 Similar analysis can be made to `sum_simple` vs `sum_unrolling`:
 one iteration in `sum_unrolling` effectively does 4 iterations in `sum_simple`.
