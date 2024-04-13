@@ -138,7 +138,7 @@ speculation is probably right.
 ![](img/loop_unrolling_pipeline.svg)
 
 Wait a minute, someone might say, the `ldr`s seem to cause problems since they all
-read values into the `w6` register, and then 4 concurrent reads from that register!
+load values into the `w6` register, and then 4 concurrent reads from that register!
 The answer is *register renaming* to the rescue! We can also try it ourselves.
 First, let's compile our C++ code to assembly:
 ```bash
