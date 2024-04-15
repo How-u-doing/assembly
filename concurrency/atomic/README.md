@@ -78,3 +78,6 @@ int compare_and_swap(int* reg, int oldval, int newval)
     return old_reg_val;
 }
 ```
+
+Interesting applications of `compare_exchange_weak` can be found in the implementation of
+[semaphores in the Zircon Kernel](https://fuchsia.googlesource.com/fuchsia/+/refs/heads/main/zircon/kernel/kernel/semaphore.cc).
