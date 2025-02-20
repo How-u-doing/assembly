@@ -1,0 +1,354 @@
+2025-02-19T11:44:38+08:00
+Running build/bench
+Run on (24 X 3187.2 MHz CPU s)
+CPU Caches:
+  L1 Data 48 KiB (x12)
+  L1 Instruction 32 KiB (x12)
+  L2 Unified 1280 KiB (x12)
+  L3 Unified 30720 KiB (x1)
+Load Average: 0.40, 0.38, 0.26
+sqrt_aligned x addr: 0x55c8393508c0, z addr: 0x55c83a292cc0
+------------------------------------------------------------------------------
+Benchmark                                    Time             CPU   Iterations
+------------------------------------------------------------------------------
+BM_xsimd_sqrt_aligned_mean              579596 ns       591446 ns           10
+BM_xsimd_sqrt_aligned_median            583227 ns       591401 ns           10
+BM_xsimd_sqrt_aligned_stddev             10638 ns         3292 ns           10
+BM_xsimd_sqrt_aligned_cv                  1.84 %          0.56 %            10
+sqrt_unaligned x addr: 0x55c83aa33ec1, z addr: 0x55c83b9762c1
+BM_xsimd_sqrt_unaligned_mean            583109 ns       592784 ns           10
+BM_xsimd_sqrt_unaligned_median          589850 ns       592337 ns           10
+BM_xsimd_sqrt_unaligned_stddev           11858 ns         2997 ns           10
+BM_xsimd_sqrt_unaligned_cv                2.03 %          0.51 %            10
+BM_std_sqrt_aligned_mean               1164429 ns      1182238 ns           10
+BM_std_sqrt_aligned_median             1163431 ns      1177913 ns           10
+BM_std_sqrt_aligned_stddev               13959 ns         8641 ns           10
+BM_std_sqrt_aligned_cv                    1.20 %          0.73 %            10
+BM_std_sqrt_unaligned_mean             1172562 ns      1185420 ns           10
+BM_std_sqrt_unaligned_median           1170262 ns      1184561 ns           10
+BM_std_sqrt_unaligned_stddev              9575 ns         7351 ns           10
+BM_std_sqrt_unaligned_cv                  0.82 %          0.62 %            10
+log_aligned x addr: 0x55c8393508c0, z addr: 0x55c83a292cc0
+BM_xsimd_log_aligned_mean              1480215 ns      1521959 ns           10
+BM_xsimd_log_aligned_median            1482286 ns      1521291 ns           10
+BM_xsimd_log_aligned_stddev              44464 ns         2666 ns           10
+BM_xsimd_log_aligned_cv                   3.00 %          0.18 %            10
+log_unaligned x addr: 0x55c83aa33ec1, z addr: 0x55c83b9762c1
+BM_xsimd_log_unaligned_mean            1513808 ns      1553098 ns           10
+BM_xsimd_log_unaligned_median          1523772 ns      1551527 ns           10
+BM_xsimd_log_unaligned_stddev            38322 ns         5798 ns           10
+BM_xsimd_log_unaligned_cv                 2.53 %          0.37 %            10
+BM_std_log_aligned_mean                2141073 ns      2172512 ns           10
+BM_std_log_aligned_median              2142551 ns      2171254 ns           10
+BM_std_log_aligned_stddev                30892 ns         6390 ns           10
+BM_std_log_aligned_cv                     1.44 %          0.29 %            10
+BM_std_log_unaligned_mean              2183865 ns      2199347 ns           10
+BM_std_log_unaligned_median            2189433 ns      2196544 ns           10
+BM_std_log_unaligned_stddev              18066 ns         9861 ns           10
+BM_std_log_unaligned_cv                   0.83 %          0.45 %            10
+log1p_aligned x addr: 0x55c8393508c0, z addr: 0x55c83a292cc0
+BM_xsimd_log1p_aligned_mean            1692908 ns      1724691 ns           10
+BM_xsimd_log1p_aligned_median          1704959 ns      1729157 ns           10
+BM_xsimd_log1p_aligned_stddev            37605 ns         7501 ns           10
+BM_xsimd_log1p_aligned_cv                 2.22 %          0.43 %            10
+log1p_unaligned x addr: 0x55c83aa33ec1, z addr: 0x55c83b9762c1
+BM_xsimd_log1p_unaligned_mean          1742960 ns      1773567 ns           10
+BM_xsimd_log1p_unaligned_median        1753241 ns      1776493 ns           10
+BM_xsimd_log1p_unaligned_stddev          50947 ns        18206 ns           10
+BM_xsimd_log1p_unaligned_cv               2.92 %          1.03 %            10
+BM_std_log1p_aligned_mean              3607124 ns      3675977 ns           10
+BM_std_log1p_aligned_median            3653910 ns      3661601 ns           10
+BM_std_log1p_aligned_stddev              89528 ns        37249 ns           10
+BM_std_log1p_aligned_cv                   2.48 %          1.01 %            10
+BM_std_log1p_unaligned_mean            3611045 ns      3676933 ns           10
+BM_std_log1p_unaligned_median          3637023 ns      3648890 ns           10
+BM_std_log1p_unaligned_stddev            70236 ns        58184 ns           10
+BM_std_log1p_unaligned_cv                 1.95 %          1.58 %            10
+exp_aligned x addr: 0x55c8393508c0, z addr: 0x55c83a292cc0
+BM_xsimd_exp_aligned_mean               932357 ns       944549 ns           10
+BM_xsimd_exp_aligned_median             930722 ns       943138 ns           10
+BM_xsimd_exp_aligned_stddev               8285 ns         3672 ns           10
+BM_xsimd_exp_aligned_cv                   0.89 %          0.39 %            10
+exp_unaligned x addr: 0x55c83aa33ec1, z addr: 0x55c83b9762c1
+BM_xsimd_exp_unaligned_mean             985418 ns      1005360 ns           10
+BM_xsimd_exp_unaligned_median           985016 ns      1004847 ns           10
+BM_xsimd_exp_unaligned_stddev            19456 ns         5471 ns           10
+BM_xsimd_exp_unaligned_cv                 1.97 %          0.54 %            10
+BM_std_exp_aligned_mean                2316657 ns      2364048 ns           10
+BM_std_exp_aligned_median              2335268 ns      2357794 ns           10
+BM_std_exp_aligned_stddev                45752 ns        22097 ns           10
+BM_std_exp_aligned_cv                     1.97 %          0.93 %            10
+BM_std_exp_unaligned_mean              2327538 ns      2371048 ns           10
+BM_std_exp_unaligned_median            2342447 ns      2369235 ns           10
+BM_std_exp_unaligned_stddev              45103 ns         8173 ns           10
+BM_std_exp_unaligned_cv                   1.94 %          0.34 %            10
+round_aligned x addr: 0x55c8393508c0, z addr: 0x55c83a292cc0
+BM_xsimd_round_aligned_mean             290849 ns       294171 ns           10
+BM_xsimd_round_aligned_median           291645 ns       293318 ns           10
+BM_xsimd_round_aligned_stddev             5924 ns         2997 ns           10
+BM_xsimd_round_aligned_cv                 2.04 %          1.02 %            10
+round_unaligned x addr: 0x55c83aa33ec1, z addr: 0x55c83b9762c1
+BM_xsimd_round_unaligned_mean           317404 ns       321628 ns           10
+BM_xsimd_round_unaligned_median         318643 ns       321073 ns           10
+BM_xsimd_round_unaligned_stddev           5679 ns         2837 ns           10
+BM_xsimd_round_unaligned_cv               1.79 %          0.88 %            10
+BM_std_round_aligned_mean               877514 ns       889646 ns           10
+BM_std_round_aligned_median             884420 ns       888280 ns           10
+BM_std_round_aligned_stddev              14533 ns         4662 ns           10
+BM_std_round_aligned_cv                   1.66 %          0.52 %            10
+BM_std_round_unaligned_mean             882482 ns       897671 ns           10
+BM_std_round_unaligned_median           884618 ns       897948 ns           10
+BM_std_round_unaligned_stddev            17048 ns         5700 ns           10
+BM_std_round_unaligned_cv                 1.93 %          0.63 %            10
+floor_aligned x addr: 0x55c8393508c0, z addr: 0x55c83a292cc0
+BM_xsimd_floor_aligned_mean             236060 ns       240644 ns           10
+BM_xsimd_floor_aligned_median           236888 ns       240084 ns           10
+BM_xsimd_floor_aligned_stddev             5244 ns         3558 ns           10
+BM_xsimd_floor_aligned_cv                 2.22 %          1.48 %            10
+floor_unaligned x addr: 0x55c83aa33ec1, z addr: 0x55c83b9762c1
+BM_xsimd_floor_unaligned_mean           260112 ns       264816 ns           10
+BM_xsimd_floor_unaligned_median         259448 ns       264327 ns           10
+BM_xsimd_floor_unaligned_stddev           5275 ns         2622 ns           10
+BM_xsimd_floor_unaligned_cv               2.03 %          0.99 %            10
+BM_std_floor_aligned_mean               280737 ns       286202 ns           10
+BM_std_floor_aligned_median             281315 ns       288249 ns           10
+BM_std_floor_aligned_stddev               6535 ns        11567 ns           10
+BM_std_floor_aligned_cv                   2.33 %          4.04 %            10
+BM_std_floor_unaligned_mean             298498 ns       304582 ns           10
+BM_std_floor_unaligned_median           300727 ns       303853 ns           10
+BM_std_floor_unaligned_stddev             5864 ns         2313 ns           10
+BM_std_floor_unaligned_cv                 1.96 %          0.76 %            10
+ceil_aligned x addr: 0x55c8393508c0, z addr: 0x55c83a292cc0
+BM_xsimd_ceil_aligned_mean              234801 ns       239420 ns           10
+BM_xsimd_ceil_aligned_median            235430 ns       239364 ns           10
+BM_xsimd_ceil_aligned_stddev              4046 ns         1792 ns           10
+BM_xsimd_ceil_aligned_cv                  1.72 %          0.75 %            10
+ceil_unaligned x addr: 0x55c83aa33ec1, z addr: 0x55c83b9762c1
+BM_xsimd_ceil_unaligned_mean            261556 ns       264760 ns           10
+BM_xsimd_ceil_unaligned_median          261249 ns       265341 ns           10
+BM_xsimd_ceil_unaligned_stddev            2992 ns         2333 ns           10
+BM_xsimd_ceil_unaligned_cv                1.14 %          0.88 %            10
+BM_std_ceil_aligned_mean                271667 ns       275687 ns           10
+BM_std_ceil_aligned_median              271802 ns       274809 ns           10
+BM_std_ceil_aligned_stddev                2816 ns         4664 ns           10
+BM_std_ceil_aligned_cv                    1.04 %          1.69 %            10
+BM_std_ceil_unaligned_mean              302117 ns       307105 ns           10
+BM_std_ceil_unaligned_median            303456 ns       306803 ns           10
+BM_std_ceil_unaligned_stddev              3978 ns         3716 ns           10
+BM_std_ceil_unaligned_cv                  1.32 %          1.21 %            10
+abs_aligned x addr: 0x55c8393508c0, z addr: 0x55c83a292cc0
+BM_xsimd_abs_aligned_mean               235848 ns       240659 ns           10
+BM_xsimd_abs_aligned_median             236289 ns       240130 ns           10
+BM_xsimd_abs_aligned_stddev               5889 ns         3791 ns           10
+BM_xsimd_abs_aligned_cv                   2.50 %          1.58 %            10
+abs_unaligned x addr: 0x55c83aa33ec1, z addr: 0x55c83b9762c1
+BM_xsimd_abs_unaligned_mean             248920 ns       255925 ns           10
+BM_xsimd_abs_unaligned_median           249995 ns       255314 ns           10
+BM_xsimd_abs_unaligned_stddev             3143 ns         3134 ns           10
+BM_xsimd_abs_unaligned_cv                 1.26 %          1.22 %            10
+BM_std_abs_aligned_mean                 235578 ns       239428 ns           10
+BM_std_abs_aligned_median               234173 ns       238001 ns           10
+BM_std_abs_aligned_stddev                 4140 ns         4208 ns           10
+BM_std_abs_aligned_cv                     1.76 %          1.76 %            10
+BM_std_abs_unaligned_mean               254558 ns       258714 ns           10
+BM_std_abs_unaligned_median             253620 ns       257762 ns           10
+BM_std_abs_unaligned_stddev               3572 ns         3630 ns           10
+BM_std_abs_unaligned_cv                   1.40 %          1.40 %            10
+signbit_aligned x addr: 0x55c8393508c0, z addr: 0x55c83a292cc0
+BM_xsimd_signbit_aligned_mean           235771 ns       239719 ns           10
+BM_xsimd_signbit_aligned_median         236114 ns       240105 ns           10
+BM_xsimd_signbit_aligned_stddev           2591 ns         2648 ns           10
+BM_xsimd_signbit_aligned_cv               1.10 %          1.10 %            10
+signbit_unaligned x addr: 0x55c83aa33ec1, z addr: 0x55c83b9762c1
+BM_xsimd_signbit_unaligned_mean         252829 ns       257256 ns           10
+BM_xsimd_signbit_unaligned_median       251721 ns       255967 ns           10
+BM_xsimd_signbit_unaligned_stddev         3340 ns         3429 ns           10
+BM_xsimd_signbit_unaligned_cv             1.32 %          1.33 %            10
+BM_std_signbit_aligned_mean             290340 ns       295452 ns           10
+BM_std_signbit_aligned_median           290345 ns       295509 ns           10
+BM_std_signbit_aligned_stddev             1805 ns         1867 ns           10
+BM_std_signbit_aligned_cv                 0.62 %          0.63 %            10
+BM_std_signbit_unaligned_mean           332883 ns       338591 ns           10
+BM_std_signbit_unaligned_median         332202 ns       337899 ns           10
+BM_std_signbit_unaligned_stddev           3371 ns         3413 ns           10
+BM_std_signbit_unaligned_cv               1.01 %          1.01 %            10
+sin_aligned x addr: 0x55c8393508c0, z addr: 0x55c83a292cc0
+BM_xsimd_sin_aligned_mean               589223 ns       599418 ns           10
+BM_xsimd_sin_aligned_median             585366 ns       595496 ns           10
+BM_xsimd_sin_aligned_stddev               9939 ns         9842 ns           10
+BM_xsimd_sin_aligned_cv                   1.69 %          1.64 %            10
+sin_unaligned x addr: 0x55c83aa33ec1, z addr: 0x55c83b9762c1
+BM_xsimd_sin_unaligned_mean             613569 ns       625114 ns           10
+BM_xsimd_sin_unaligned_median           606639 ns       618037 ns           10
+BM_xsimd_sin_unaligned_stddev            19662 ns        20029 ns           10
+BM_xsimd_sin_unaligned_cv                 3.20 %          3.20 %            10
+BM_std_sin_aligned_mean                2957037 ns      3012761 ns           10
+BM_std_sin_aligned_median              2954902 ns      3010684 ns           10
+BM_std_sin_aligned_stddev                17991 ns        18206 ns           10
+BM_std_sin_aligned_cv                     0.61 %          0.60 %            10
+BM_std_sin_unaligned_mean              3012660 ns      3065396 ns           10
+BM_std_sin_unaligned_median            2991310 ns      3043537 ns           10
+BM_std_sin_unaligned_stddev              37609 ns        38299 ns           10
+BM_std_sin_unaligned_cv                   1.25 %          1.25 %            10
+cos_aligned x addr: 0x55c8393508c0, z addr: 0x55c83a292cc0
+BM_xsimd_cos_aligned_mean               586068 ns       595882 ns           10
+BM_xsimd_cos_aligned_median             585505 ns       595272 ns           10
+BM_xsimd_cos_aligned_stddev               4444 ns         4564 ns           10
+BM_xsimd_cos_aligned_cv                   0.76 %          0.77 %            10
+cos_unaligned x addr: 0x55c83aa33ec1, z addr: 0x55c83b9762c1
+BM_xsimd_cos_unaligned_mean             617013 ns       630741 ns           10
+BM_xsimd_cos_unaligned_median           599518 ns       612287 ns           10
+BM_xsimd_cos_unaligned_stddev            33768 ns        34688 ns           10
+BM_xsimd_cos_unaligned_cv                 5.47 %          5.50 %            10
+BM_std_cos_aligned_mean                2750121 ns      2809952 ns           10
+BM_std_cos_aligned_median              2750076 ns      2806503 ns           10
+BM_std_cos_aligned_stddev                11564 ns        10957 ns           10
+BM_std_cos_aligned_cv                     0.42 %          0.39 %            10
+BM_std_cos_unaligned_mean              2777016 ns      2828151 ns           10
+BM_std_cos_unaligned_median            2772704 ns      2822417 ns           10
+BM_std_cos_unaligned_stddev              10576 ns        11493 ns           10
+BM_std_cos_unaligned_cv                   0.38 %          0.41 %            10
+sinh_aligned x addr: 0x55c8393508c0, z addr: 0x55c83a292cc0
+BM_xsimd_sinh_aligned_mean              396443 ns       403116 ns           10
+BM_xsimd_sinh_aligned_median            393932 ns       400475 ns           10
+BM_xsimd_sinh_aligned_stddev              7339 ns         7551 ns           10
+BM_xsimd_sinh_aligned_cv                  1.85 %          1.87 %            10
+sinh_unaligned x addr: 0x55c83aa33ec1, z addr: 0x55c83b9762c1
+BM_xsimd_sinh_unaligned_mean            406863 ns       415335 ns           10
+BM_xsimd_sinh_unaligned_median          405418 ns       413732 ns           10
+BM_xsimd_sinh_unaligned_stddev            6350 ns         5112 ns           10
+BM_xsimd_sinh_unaligned_cv                1.56 %          1.23 %            10
+BM_std_sinh_aligned_mean               5181605 ns      5314303 ns           10
+BM_std_sinh_aligned_median             5184220 ns      5318037 ns           10
+BM_std_sinh_aligned_stddev               42424 ns        32801 ns           10
+BM_std_sinh_aligned_cv                    0.82 %          0.62 %            10
+BM_std_sinh_unaligned_mean             5228672 ns      5321083 ns           10
+BM_std_sinh_unaligned_median           5207251 ns      5299566 ns           10
+BM_std_sinh_unaligned_stddev             63257 ns        64275 ns           10
+BM_std_sinh_unaligned_cv                  1.21 %          1.21 %            10
+cosh_aligned x addr: 0x55c8393508c0, z addr: 0x55c83a292cc0
+BM_xsimd_cosh_aligned_mean             1616696 ns      1644891 ns           10
+BM_xsimd_cosh_aligned_median           1607532 ns      1635553 ns           10
+BM_xsimd_cosh_aligned_stddev             26358 ns        26847 ns           10
+BM_xsimd_cosh_aligned_cv                  1.63 %          1.63 %            10
+cosh_unaligned x addr: 0x55c83aa33ec1, z addr: 0x55c83b9762c1
+BM_xsimd_cosh_unaligned_mean           1708154 ns      1733683 ns           10
+BM_xsimd_cosh_unaligned_median         1685300 ns      1709374 ns           10
+BM_xsimd_cosh_unaligned_stddev           44683 ns        46657 ns           10
+BM_xsimd_cosh_unaligned_cv                2.62 %          2.69 %            10
+BM_std_cosh_aligned_mean               2922954 ns      3045406 ns           10
+BM_std_cosh_aligned_median             2907766 ns      3022514 ns           10
+BM_std_cosh_aligned_stddev               65640 ns        48168 ns           10
+BM_std_cosh_aligned_cv                    2.25 %          1.58 %            10
+BM_std_cosh_unaligned_mean             2975564 ns      3039169 ns           10
+BM_std_cosh_unaligned_median           2972286 ns      3023837 ns           10
+BM_std_cosh_unaligned_stddev             61664 ns        44812 ns           10
+BM_std_cosh_unaligned_cv                  2.07 %          1.47 %            10
+pow_aligned x addr: 0x55c8393508c0, y addr: 0x55c839af1ac0, z addr: 0x55c83a292cc0
+BM_xsimd_pow_aligned_mean              1878882 ns      1909501 ns           10
+BM_xsimd_pow_aligned_median            1864868 ns      1894962 ns           10
+BM_xsimd_pow_aligned_stddev              44582 ns        45905 ns           10
+BM_xsimd_pow_aligned_cv                   2.37 %          2.40 %            10
+pow_unaligned x addr: 0x55c83aa33ec1, y addr: 0x55c83b1d50c1, z addr: 0x55c83b9762c1
+BM_xsimd_pow_unaligned_mean            1886324 ns      1904819 ns           10
+BM_xsimd_pow_unaligned_median          1886015 ns      1901271 ns           10
+BM_xsimd_pow_unaligned_stddev            11532 ns        13293 ns           10
+BM_xsimd_pow_unaligned_cv                 0.61 %          0.70 %            10
+BM_std_pow_aligned_mean                7354199 ns      7388625 ns           10
+BM_std_pow_aligned_median              7346044 ns      7401522 ns           10
+BM_std_pow_aligned_stddev                50842 ns        42446 ns           10
+BM_std_pow_aligned_cv                     0.69 %          0.57 %            10
+BM_std_pow_unaligned_mean              7342798 ns      7492606 ns           10
+BM_std_pow_unaligned_median            7346789 ns      7474943 ns           10
+BM_std_pow_unaligned_stddev              92186 ns        47113 ns           10
+BM_std_pow_unaligned_cv                   1.26 %          0.63 %            10
+max_aligned x addr: 0x55c8393508c0, y addr: 0x55c839af1ac0, z addr: 0x55c83a292cc0
+BM_xsimd_max_aligned_mean               320574 ns       335389 ns           10
+BM_xsimd_max_aligned_median             320366 ns       334257 ns           10
+BM_xsimd_max_aligned_stddev              11943 ns         5945 ns           10
+BM_xsimd_max_aligned_cv                   3.73 %          1.77 %            10
+max_unaligned x addr: 0x55c83aa33ec1, y addr: 0x55c83b1d50c1, z addr: 0x55c83b9762c1
+BM_xsimd_max_unaligned_mean             370747 ns       377139 ns           10
+BM_xsimd_max_unaligned_median           368681 ns       375037 ns           10
+BM_xsimd_max_unaligned_stddev             7506 ns         7632 ns           10
+BM_xsimd_max_unaligned_cv                 2.02 %          2.02 %            10
+BM_std_max_aligned_mean                 327885 ns       332494 ns           10
+BM_std_max_aligned_median               326518 ns       330972 ns           10
+BM_std_max_aligned_stddev                 4347 ns         4551 ns           10
+BM_std_max_aligned_cv                     1.33 %          1.37 %            10
+BM_std_max_unaligned_mean               361806 ns       381751 ns           10
+BM_std_max_unaligned_median             360163 ns       380182 ns           10
+BM_std_max_unaligned_stddev               7723 ns         5524 ns           10
+BM_std_max_unaligned_cv                   2.13 %          1.45 %            10
+min_aligned x addr: 0x55c8393508c0, y addr: 0x55c839af1ac0, z addr: 0x55c83a292cc0
+BM_xsimd_min_aligned_mean               331342 ns       337235 ns           10
+BM_xsimd_min_aligned_median             328784 ns       334597 ns           10
+BM_xsimd_min_aligned_stddev               6384 ns         6415 ns           10
+BM_xsimd_min_aligned_cv                   1.93 %          1.90 %            10
+min_unaligned x addr: 0x55c83aa33ec1, y addr: 0x55c83b1d50c1, z addr: 0x55c83b9762c1
+BM_xsimd_min_unaligned_mean             369956 ns       376227 ns           10
+BM_xsimd_min_unaligned_median           370645 ns       376970 ns           10
+BM_xsimd_min_unaligned_stddev             3740 ns         3938 ns           10
+BM_xsimd_min_unaligned_cv                 1.01 %          1.05 %            10
+BM_std_min_aligned_mean                 332934 ns       335910 ns           10
+BM_std_min_aligned_median               331560 ns       335420 ns           10
+BM_std_min_aligned_stddev                 4809 ns         5240 ns           10
+BM_std_min_aligned_cv                     1.44 %          1.56 %            10
+BM_std_min_unaligned_mean               365395 ns       377706 ns           10
+BM_std_min_unaligned_median             370920 ns       377444 ns           10
+BM_std_min_unaligned_stddev              14067 ns         4674 ns           10
+BM_std_min_unaligned_cv                   3.85 %          1.24 %            10
+hypot_aligned x addr: 0x55c8393508c0, y addr: 0x55c839af1ac0, z addr: 0x55c83a292cc0
+BM_xsimd_hypot_aligned_mean             672692 ns       697885 ns           10
+BM_xsimd_hypot_aligned_median           677011 ns       689416 ns           10
+BM_xsimd_hypot_aligned_stddev            31266 ns        16156 ns           10
+BM_xsimd_hypot_aligned_cv                 4.65 %          2.31 %            10
+hypot_unaligned x addr: 0x55c83aa33ec1, y addr: 0x55c83b1d50c1, z addr: 0x55c83b9762c1
+BM_xsimd_hypot_unaligned_mean           745549 ns       759745 ns           10
+BM_xsimd_hypot_unaligned_median         708736 ns       722399 ns           10
+BM_xsimd_hypot_unaligned_stddev          78592 ns        80198 ns           10
+BM_xsimd_hypot_unaligned_cv              10.54 %         10.56 %            10
+BM_std_hypot_aligned_mean              2351355 ns      2391754 ns           10
+BM_std_hypot_aligned_median            2346887 ns      2387183 ns           10
+BM_std_hypot_aligned_stddev              11328 ns        11530 ns           10
+BM_std_hypot_aligned_cv                   0.48 %          0.48 %            10
+BM_std_hypot_unaligned_mean            2466130 ns      2480986 ns           10
+BM_std_hypot_unaligned_median          2423005 ns      2437643 ns           10
+BM_std_hypot_unaligned_stddev           104668 ns       105294 ns           10
+BM_std_hypot_unaligned_cv                 4.24 %          4.24 %            10
+fmod_aligned x addr: 0x55c8393508c0, y addr: 0x55c839af1ac0, z addr: 0x55c83a292cc0
+BM_xsimd_fmod_aligned_mean             1425353 ns      1508276 ns           10
+BM_xsimd_fmod_aligned_median           1399923 ns      1503908 ns           10
+BM_xsimd_fmod_aligned_stddev             44675 ns        11249 ns           10
+BM_xsimd_fmod_aligned_cv                  3.13 %          0.75 %            10
+fmod_unaligned x addr: 0x55c83aa33ec1, y addr: 0x55c83b1d50c1, z addr: 0x55c83b9762c1
+BM_xsimd_fmod_unaligned_mean           1490502 ns      1518909 ns           10
+BM_xsimd_fmod_unaligned_median         1485241 ns      1512401 ns           10
+BM_xsimd_fmod_unaligned_stddev           15411 ns        16151 ns           10
+BM_xsimd_fmod_unaligned_cv                1.03 %          1.06 %            10
+BM_std_fmod_aligned_mean               5814486 ns      5920046 ns           10
+BM_std_fmod_aligned_median             5811726 ns      5918764 ns           10
+BM_std_fmod_aligned_stddev               18810 ns        20086 ns           10
+BM_std_fmod_aligned_cv                    0.32 %          0.34 %            10
+BM_std_fmod_unaligned_mean             5855904 ns      5926614 ns           10
+BM_std_fmod_unaligned_median           5861152 ns      5924039 ns           10
+BM_std_fmod_unaligned_stddev             29057 ns        20025 ns           10
+BM_std_fmod_unaligned_cv                  0.50 %          0.34 %            10
+remainder_aligned x addr: 0x55c8393508c0, y addr: 0x55c839af1ac0, z addr: 0x55c83a292cc0
+BM_xsimd_remainder_aligned_mean        1564296 ns      1611371 ns           10
+BM_xsimd_remainder_aligned_median      1591744 ns      1611706 ns           10
+BM_xsimd_remainder_aligned_stddev        54647 ns         8932 ns           10
+BM_xsimd_remainder_aligned_cv             3.49 %          0.55 %            10
+remainder_unaligned x addr: 0x55c83aa33ec1, y addr: 0x55c83b1d50c1, z addr: 0x55c83b9762c1
+BM_xsimd_remainder_unaligned_mean      1579164 ns      1634779 ns           10
+BM_xsimd_remainder_unaligned_median    1591165 ns      1622128 ns           10
+BM_xsimd_remainder_unaligned_stddev      55120 ns        21363 ns           10
+BM_xsimd_remainder_unaligned_cv           3.49 %          1.31 %            10
+BM_std_remainder_aligned_mean          6239869 ns      6370147 ns           10
+BM_std_remainder_aligned_median        6220084 ns      6350169 ns           10
+BM_std_remainder_aligned_stddev          52234 ns        53306 ns           10
+BM_std_remainder_aligned_cv               0.84 %          0.84 %            10
+BM_std_remainder_unaligned_mean        6273867 ns      6382395 ns           10
+BM_std_remainder_unaligned_median      6259684 ns      6368808 ns           10
+BM_std_remainder_unaligned_stddev        34056 ns        34488 ns           10
+BM_std_remainder_unaligned_cv             0.54 %          0.54 %            10
