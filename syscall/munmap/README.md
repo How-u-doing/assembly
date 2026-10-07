@@ -206,3 +206,9 @@ $2 = (void *) 0x7fff8660c968
 It appears that the process crashed upon executing a store to `-0x18(%rbp)` (`0x7fff8660c968`), which is in the stack `[0x7fff865ec000, 0x7fff8660d000)`, which does **not** intersect the unmapped range. We can also see that the `SYS_munmap` returned `0` (success) in `$rax`, and gdb emits warnings about not being able to access memory at `0x789eba2b4128` and `0x789eba2b4130`, which are inside the unmapped `ld.so`.
 
 What's even interesting is that this `munmap()` would fail when running inside `gdb` instead of crashing. So, `munmap()` behaves somewhat differently under ptrace mode.
+
+---
+
+Claude says it's because of the use of `struct rseq` in glibc that allows the kernel to do some extra checks when returning to user space after a syscall. If the thread's `struct rseq` is in an unmapped page, the kernel will send a `SIGSEGV` signal to the process, which is what happened here (glibc got unmapped).
+
+See more in [Claude's Explanation](Claude_Explanation.md).
